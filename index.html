@@ -1,1 +1,77 @@
 
+charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mitan Bhumi Press Reporter</title>
+    <style>
+        body { margin:0; font-family:Arial,sans-serif; background:#f2f2f2; }
+        .top-bar { background:#000; color:#fff; text-align:center; padding:8px; font-size:14px; }
+        header { background:#d40000; color:white; padding:20px; text-align:center; font-size:28px; font-weight:bold; position:relative; }
+        header img.logo { position:absolute; left:20px; top:15px; height:50px; }
+        nav { background:#fff; padding:10px; display:flex; justify-content:center; gap:20px; border-bottom:1px solid #ddd; }
+        nav a { text-decoration:none; color:#d40000; font-weight:bold; }
+        .hero { background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('banner.jpg'); height:250px; background-size:cover; color:white; display:flex; justify-content:center; align-items:center; font-size:32px; text-align:center; padding:10px; }
+        .news-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:15px; padding:15px; }
+        .news-card { background:white; padding:15px; border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,0.1); }
+        .news-card h2 { color:#d40000; }
+        .date { color:#777; font-size:14px; }
+        footer { background:#222; color:white; text-align:center; padding:20px; margin-top:20px; }
+    </style>
+    <script>
+        // Auto-updating breaking news with modified copyright-free content
+        const newsData = [
+            {section:'breaking', headline:'प्रधानमंत्री ने छत्तीसगढ़ में विकास प्रोजेक्ट का उद्घाटन किया', content:'पीएम मोदी ने आज छत्तीसगढ़ में कई बड़े विकास प्रोजेक्ट्स का उद्घाटन किया। इनमें तेल और ऊर्जा, आवास योजना और अन्य इंफ्रास्ट्रक्चर शामिल हैं। (स्रोत: Economic Times, Navbharat Times)', date:'25 Nov 2025'},
+            {section:'viral', headline:'राज्यपाल ने राज्योत्सव में विकास की बात कही', content:'राज्यपाल ने छत्तीसगढ़ की विकास यात्रा पर प्रकाश डाला और बताया कि राज्य ने पिछले कई सालों में मजबूत नींव रखी है। (स्रोत: Navbharat Times)', date:'25 Nov 2025'},
+            {section:'local', headline:'छत्तीसगढ़ की टीम ने खेलों में सफलता हासिल की', content:'राज्य की खेल टीम ने हाल ही में आयोजित राष्ट्रीय खेल मीट में लगातार सफलता हासिल की और टॉप पोजिशन बनाई। (स्रोत: Times of India)', date:'25 Nov 2025'}
+        ];
+
+        function updateNews() {
+            newsData.forEach(news => {
+                const card = document.getElementById(news.section);
+                card.querySelector('h2').textContent = news.headline;
+                card.querySelector('p.date').textContent = 'Date: ' + news.date;
+                card.querySelector('p.content').textContent = news.content;
+            });
+        }
+
+        setInterval(updateNews, 10000);
+        window.onload = updateNews;
+    </script>
+</head>
+<body>
+
+<div class="top-bar">CG YT DIGITAL NEWS 365 - Real-time Breaking News</div>
+<header>
+    <img class="logo" src="logo.png" alt="Logo">
+    Mitan Bhumi Press Reporter
+</header>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#breaking">Breaking</a>
+    <a href="#viral">Viral</a>
+    <a href="#local">Raipur</a>
+    <a href="#contact">Contact</a>
+</nav>
+<div class="hero">आज की ताज़ा खबरें और Viral Updates</div>
+<div class="news-container">
+    <div class="news-card" id="breaking">
+        <h2></h2>
+        <p class="date"></p>
+        <p class="content"></p>
+    </div>
+    <div class="news-card" id="viral">
+        <h2></h2>
+        <p class="date"></p>
+        <p class="content"></p>
+    </div>
+    <div class="news-card" id="local">
+        <h2></h2>
+        <p class="date"></p>
+        <p class="content"></p>
+    </div>
+</div>
+<footer>
+    © 2025 Mitan Bhumi Press Reporter | All Rights Reserved
+</footer>
+
+</body>
+</html>
