@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mitan Bhumi Press Reporter</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+        header {
+            background: #d40000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .news-card {
+            background: white;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .date {
+            color: #777;
+            font-size: 14px;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    CG YT DIGITAL NEWS 365
+</header>
+
+<div class="news-card">
+    <h2>📢 आज की मुख्य खबर</h2>
+    <p class="date">Date: 25 Nov 2025</p>
+    <p>
+        छत्तीसगढ़ में आज के ताज़ा हालात, ब्रेकिंग अपडेट और स्थानीय खबरें जल्द यहाँ अपडेट होंगी।
+    </p>
+</div>
+
+<div class="news-card">
+    <h2>🔥 वायरल खबर</h2>
+    <p>
+        अभी वायरल चल रही खबरें: स्थानीय, नेशनल और सोशल मीडिया ट्रेंड्स यहाँ दिखाई देंगी।
+    </p>
+</div>
+
+<footer>
+    © 2025 Mitan Bhumi Press Reporter | All Rights Reserved
+</footer>
+
+</body>
+</html>
